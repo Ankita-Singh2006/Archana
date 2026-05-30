@@ -74,8 +74,8 @@ body{
   background:
   linear-gradient(
     90deg,
-    #1c1c1d,
-    #242324
+    #3b82f6,
+    #d946ef
   );
 
   position:absolute;
@@ -111,8 +111,8 @@ body{
   background:
   linear-gradient(
     90deg,
-    #161616,
-    #141414
+    #4da6ff,
+    #d946ef
   );
 
   -webkit-background-clip:text;
@@ -187,9 +187,9 @@ body{
   background:
   linear-gradient(
     135deg,
-    #330996,
-    #330988,
-    #0c1d80
+    #061c3f,
+    #1e104e,
+    #1d074e
   );
 
   -webkit-mask:
@@ -522,38 +522,4 @@ body{
     font-size:16px;
   }
 
-}
-.project-content{
-  display:block !important;
-  opacity:1 !important;
-  visibility:visible !important;
-}
-
-.project-header h3{
-  color:white !important;
-  opacity:1 !important;
-}
-
-.project-icon{
-  color:white !important;
-  opacity:1 !important;
-}
-
-.project-content p{
-  color:#9ca3af !important;
-  opacity:1 !important;
-}
-
-.live-btn,
-.github-btn{
-  opacity:1 !important;
-  visibility:visible !important;
-}
-.project-content{
-  position:relative;
-  z-index:100;
-}
-
-.image-box{
-  z-index:1;
 }
