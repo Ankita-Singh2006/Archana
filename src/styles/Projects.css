@@ -74,8 +74,8 @@ body{
   background:
   linear-gradient(
     90deg,
-    #3b82f6,
-    #d946ef
+    #1c1c1d,
+    #242324
   );
 
   position:absolute;
@@ -111,8 +111,8 @@ body{
   background:
   linear-gradient(
     90deg,
-    #4da6ff,
-    #d946ef
+    #161616,
+    #141414
   );
 
   -webkit-background-clip:text;
@@ -187,9 +187,9 @@ body{
   background:
   linear-gradient(
     135deg,
-    #3b82f6,
-    #8b5cf6,
-    #d946ef
+    #0f0f0f,
+    #252427,
+    #161516
   );
 
   -webkit-mask:
