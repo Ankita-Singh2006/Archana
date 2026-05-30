@@ -523,3 +523,37 @@ body{
   }
 
 }
+.project-content{
+  display:block !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
+
+.project-header h3{
+  color:white !important;
+  opacity:1 !important;
+}
+
+.project-icon{
+  color:white !important;
+  opacity:1 !important;
+}
+
+.project-content p{
+  color:#9ca3af !important;
+  opacity:1 !important;
+}
+
+.live-btn,
+.github-btn{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.project-content{
+  position:relative;
+  z-index:100;
+}
+
+.image-box{
+  z-index:1;
+}
