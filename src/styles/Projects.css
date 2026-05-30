@@ -1,0 +1,525 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Poppins",sans-serif;
+  background:#02030a;
+  overflow-x:hidden;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.projects-section{
+  width:100%;
+  min-height:100vh;
+
+  padding:110px 6%;
+
+  background:
+  radial-gradient(circle at top left,
+  rgba(98,0,255,0.12),
+  transparent 35%),
+
+  radial-gradient(circle at bottom right,
+  rgba(255,0,212,0.10),
+  transparent 35%),
+
+  #02030a;
+
+  color:white;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* =========================
+   SMALL TITLE
+========================= */
+
+.small-title{
+  text-align:center;
+
+  color:#ffffff;
+
+  letter-spacing:4px;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  margin-bottom:18px;
+
+  position:relative;
+}
+
+.small-title::before,
+.small-title::after{
+  content:"";
+
+  width:50px;
+  height:2px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #3b82f6,
+    #d946ef
+  );
+
+  position:absolute;
+
+  top:50%;
+}
+
+.small-title::before{
+  left:38%;
+}
+
+.small-title::after{
+  right:38%;
+}
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.projects-section h1{
+  text-align:center;
+
+  font-size:85px;
+
+  font-weight:800;
+
+  margin-bottom:15px;
+
+  line-height:1;
+}
+
+.projects-section h1 span{
+  background:
+  linear-gradient(
+    90deg,
+    #4da6ff,
+    #d946ef
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.project-subtitle{
+  text-align:center;
+
+  color:#9ca3af;
+
+  font-size:20px;
+
+  margin-bottom:65px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.projects-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:28px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.project-card{
+  background:
+  rgba(7,10,25,0.98);
+
+  border:
+  1px solid rgba(255,255,255,0.06);
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  transition:0.45s ease;
+
+  backdrop-filter:blur(16px);
+
+  box-shadow:
+  0 0 30px rgba(0,0,0,0.25);
+}
+
+/* BORDER GLOW */
+
+.project-card::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:28px;
+
+  padding:1px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #3b82f6,
+    #8b5cf6,
+    #d946ef
+  );
+
+  -webkit-mask:
+  linear-gradient(#fff 0 0) content-box,
+  linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+
+  pointer-events:none;
+}
+
+/* HOVER */
+
+.project-card:hover{
+  transform:
+  translateY(-12px);
+
+  box-shadow:
+  0 0 40px rgba(139,92,246,0.28);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-box{
+  width:100%;
+  height:240px;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+.image-box img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:0.6s ease;
+}
+
+.project-card:hover img{
+  transform:scale(1.05);
+}
+
+/* IMAGE OVERLAY */
+
+.image-box::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  /* background:
+  linear-gradient(
+    to top,
+    rgb(134, 119, 134),
+    rgba(13, 26, 126, 0.1)
+  ); */
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.project-content{
+  padding:24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.project-header{
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  margin-bottom:14px;
+}
+
+/* ICON */
+
+.project-icon{
+  width:58px;
+  height:58px;
+
+  border-radius:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:25px;
+
+  flex-shrink:0;
+
+  box-shadow:
+  0 0 20px rgba(68, 30, 155, 0.15);
+}
+
+/* TITLE */
+
+.project-header h3{
+  color:white;
+
+  font-size:30px;
+
+  font-weight:700;
+
+  margin:0;
+}
+
+/* DESC */
+
+.project-content p{
+  color:#9ca3af;
+
+  line-height:1.8;
+
+  margin-bottom:24px;
+
+  font-size:16px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.project-buttons{
+  display:flex;
+
+  gap:15px;
+}
+
+/* BUTTON COMMON */
+
+.live-btn,
+.github-btn{
+  flex:1;
+
+  padding:15px;
+
+  border-radius:15px;
+
+  cursor:pointer;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  transition:0.4s ease;
+}
+
+/* LIVE BUTTON */
+
+.live-btn{
+  background:
+  linear-gradient(
+    90deg,
+    #04142f,
+    #062d64
+  );
+
+  border:
+  1px solid rgba(77,166,255,0.25);
+
+  color:#4da6ff;
+}
+
+.live-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+  0 0 25px rgba(77,166,255,0.22);
+}
+
+/* GITHUB */
+
+.github-btn{
+  background:transparent;
+
+  border:
+  1px solid rgba(255,255,255,0.12);
+
+  color:white;
+}
+
+.github-btn:hover{
+  background:
+  rgba(255,255,255,0.06);
+
+  transform:translateY(-4px);
+}
+
+/* =========================
+   MORE BUTTON
+========================= */
+
+.more-btn-box{
+  display:flex;
+  justify-content:center;
+
+  margin-top:75px;
+}
+
+.more-btn{
+  padding:20px 42px;
+
+  border:none;
+
+  border-radius:60px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #06459e,
+    #a10b83
+  );
+
+  color:white;
+
+  font-size:18px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.45s ease;
+
+  box-shadow:
+  0 0 30px rgba(168,85,247,0.2);
+}
+
+.more-btn:hover{
+  transform:
+  scale(1.06);
+
+  box-shadow:
+  0 0 35px rgba(217,70,239,0.4);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:992px){
+
+  .projects-section h1{
+    font-size:65px;
+  }
+
+  .project-subtitle{
+    font-size:18px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .projects-section{
+    padding:90px 5%;
+  }
+
+  .projects-section h1{
+    font-size:48px;
+  }
+
+  .project-subtitle{
+    font-size:15px;
+
+    line-height:1.8;
+  }
+
+  .projects-grid{
+    grid-template-columns:1fr;
+
+    gap:22px;
+  }
+
+  .project-header h3{
+    font-size:24px;
+  }
+
+  .project-content{
+    padding:20px;
+  }
+
+  .project-buttons{
+    flex-direction:column;
+  }
+
+  .image-box{
+    height:220px;
+  }
+
+  .small-title::before,
+  .small-title::after{
+    display:none;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .projects-section h1{
+    font-size:38px;
+  }
+
+  .project-header h3{
+    font-size:20px;
+  }
+
+  .project-content p{
+    font-size:14px;
+  }
+
+  .live-btn,
+  .github-btn{
+    padding:13px;
+    font-size:14px;
+  }
+
+  .more-btn{
+    width:100%;
+    font-size:16px;
+  }
+
+}
