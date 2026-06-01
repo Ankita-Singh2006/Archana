@@ -111,7 +111,7 @@ function Contact() {
 
                 <div>
                   <h3>Email</h3>
-                  <p>ankitasingh230705@gmail.com</p>
+                  <p>ankitasingh230704@gmail.com</p>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ function Contact() {
 
                 <div>
                   <h3>Phone</h3>
-                  <p>+91 8005447254</p>
+                  <p>+91 80054472xx</p>
                 </div>
               </div>
 
@@ -144,6 +144,9 @@ function Contact() {
               className="card reveal"
             >
               <h2>Follow Me</h2>
+              <p className="text">
+                Connect with me on social platforms.
+              </p>
 
               <div className="socials">
                 <a href="/">

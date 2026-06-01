@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/Palindrome.css";
 
-function Palindrome() {
+function Palindrome({goBack}) {
   const [text, setText] = useState("");
   const [result, setResult] = useState(null);
 
@@ -20,6 +20,12 @@ function Palindrome() {
 
   return (
     <div className="pal-app">
+      <button
+  className="backBtn"
+  onClick={goBack}
+>
+  ←
+</button>
       <div className="pal-container">
         <div className="pal-logo-circle">
           <span>{"</>"}</span>

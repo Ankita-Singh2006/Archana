@@ -100,17 +100,17 @@ function About(){
             className="download-btn"
           >
 
-            Download CV
+            View Resume
 
             <Download size={22}/>
 
           </button>
 
-          <button className="arrow-btn">
+          {/* <button className="arrow-btn">
 
             <ArrowRight size={26}/>
 
-          </button>
+          </button> */}
 
         </div>
 

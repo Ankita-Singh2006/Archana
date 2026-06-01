@@ -16,155 +16,147 @@ import Calculator from "./components/Calculator";
 import Weather from "./components/Weather";
 import Maps from "./components/Maps";
 import Palindrome from "./components/Palindrome";
-// import Todo from "./components/Todo";
-// import Music from "./components/Music";
+import Todo from "./components/Todo";
+import Register from "./components/Register";
+import Stopwatch from "./components/Stopwatch";
+import Toggle from "./components/Toggle";
+
 
 function App() {
   const [activeProject, setActiveProject] = useState(null);
   const [scrollPosition,setScrollPosition] = useState(0);
 
   if (activeProject === "calculator") {
-    return (
-      <>
-        <button
-          style={{
-            margin: "20px",
-            padding: "10px 20px",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-  setActiveProject(null);
-
-  setTimeout(() => {
-    window.scrollTo({
-      top: scrollPosition,
-      behavior: "smooth",
-    });
-  }, 100);
-}}
-        >
-          ← Back To Portfolio
-        </button>
-
-        <Calculator />
-      </>
-    );
-  }
- if (activeProject === "weather") {
   return (
-    <>
-      {/* 🔙 TOP BAR */}
-      <div className="top-bar">
-        <button
-          className="back-button"
-          onClick={() => {
-            setActiveProject(null);
+    <Calculator
+      goBack={() => {
+        setActiveProject(null);
 
-            setTimeout(() => {
-              window.scrollTo({
-                top: scrollPosition,
-                behavior: "smooth",
-              });
-            }, 100);
-          }}
-        >
-          ← Back
-        </button>
-      </div>
-
-      {/* 🌤️ WEATHER COMPONENT OUTSIDE TOP BAR */}
-      <Weather />
-    </>
+        setTimeout(() => {
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }, 100);
+      }}
+    />
   );
 }
-      if (activeProject === "maps") {
+ if (activeProject === "weather") {
   return (
-    <>
-      {/* TOP BAR */}
-      <div className="top-bar">
-        <button
-          className="back-button"
-          onClick={() => {
-            setActiveProject(null);
+    <Weather
+      goBack={() => {
+        setActiveProject(null);
 
-            setTimeout(() => {
-              window.scrollTo({
-                top: scrollPosition,
-                behavior: "smooth",
-              });
-            }, 100);
-          }}
-        >
-          ← Back
-        </button>
-      </div>
+        setTimeout(() => {
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }, 100);
+      }}
+    />
+  );
+}
+     if (activeProject === "maps") {
+  return (
+    <Maps
+      goBack={() => {
+        setActiveProject(null);
 
-      {/* MAP OUTSIDE TOP BAR (VERY IMPORTANT) */}
-      <Maps />
-    </>
+        setTimeout(() => {
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }, 100);
+      }}
+    />
   );
 }
 
 if (activeProject === "palindrome") {
   return (
-    <>
-      <button onClick={() => {
+    <Palindrome
+      goBack={() => {
         setActiveProject(null);
+
         setTimeout(() => {
           window.scrollTo({
             top: scrollPosition,
             behavior: "smooth",
           });
         }, 100);
-      }}>
-        ← Back To Portfolio
-      </button>
+      }}
+    />
+  );
+}
+if (activeProject === "register") {
+  return (
+    <Register
+      goBack={() => {
+        setActiveProject(null);
 
-      <Palindrome />
-    </>
+        setTimeout(() => {
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }, 100);
+      }}
+    />
+  );
+}
+if (activeProject === "toggle") {
+  return (
+    <Toggle
+      goBack={() => {
+        setActiveProject(null);
+
+        setTimeout(() => {
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: "smooth",
+          });
+        }, 100);
+      }}
+    />
   );
 }
 
 if (activeProject === "todo") {
   return (
-    <>
-      <button onClick={() => {
+    <Todo
+      goBack={() => {
         setActiveProject(null);
+
         setTimeout(() => {
           window.scrollTo({
             top: scrollPosition,
             behavior: "smooth",
           });
         }, 100);
-      }}>
-        ← Back To Portfolio
-      </button>
-
-      <Todo />
-    </>
+      }}
+    />
   );
 }
 
-if (activeProject === "music") {
+if (activeProject === "stopwatch") {
   return (
-    <>
-      <button onClick={() => {
+    <Stopwatch
+      goBack={() => {
         setActiveProject(null);
+
         setTimeout(() => {
           window.scrollTo({
             top: scrollPosition,
             behavior: "smooth",
           });
         }, 100);
-      }}>
-        ← Back To Portfolio
-      </button>
-
-      <Music />
-    </>
+      }}
+    />
   );
 }
-
   return (
     <div>
       <Navbar />

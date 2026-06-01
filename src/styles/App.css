@@ -6,7 +6,7 @@ html{
   padding:0;
   box-sizing:border-box;
 }
-.top-bar {
+/* .top-bar {
   position: fixed;
   top: 3;
   left: 0;
@@ -25,8 +25,68 @@ html{
   border: none;
   font-size: 25px;
   cursor: pointer;
+} */
+.top-bar{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 99999;
 }
 
+.back-button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  padding: 12px 20px;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #7e22ce,
+    #c026d3
+  );
+
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+
+  box-shadow:
+    0 0 20px rgba(192,38,211,.35);
+
+  transition: .3s;
+}
+.backBtn{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #d946ef
+  );
+
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover{
+  transform: translateY(-2px);
+}
 /* 🔥 IMPORTANT: Leaflet spacing fix */
 .leaflet-container {
   margin-top: 0px;

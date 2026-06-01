@@ -43,8 +43,8 @@
 }
 
 .pal-container{
-  width:90%;
-  max-width:800px;
+  width:70%;
+  max-width:600px;
 
   padding:0px;
 
@@ -61,8 +61,8 @@
 }
 
 .pal-logo-circle{
-  width:120px;
-  height:120px;
+  width:80px;
+  height:80px;
 
   margin:auto;
 
@@ -108,11 +108,11 @@
 .pal-divider{
   display:flex;
   justify-content:center;
-  margin:20px 0;
+  margin:5px 0;
 }
 
 .pal-divider span{
-  width:140px;
+  width:120px;
   height:2px;
 
   background:#8f2fff;
@@ -140,14 +140,14 @@
   display:block;
   color:white;
 
-  margin-bottom:12px;
+  margin-bottom:8px;
   font-size:1rem;
 }
 
 .pal-input-box{
   width:100%;
 
-  padding:18px 20px;
+  padding:10px 15px;
 
   border:2px solid #7822ff;
   border-radius:15px;
@@ -174,8 +174,8 @@
 .pal-check-btn{
   width:100%;
 
-  margin-top:22px;
-  padding:18px;
+  margin-top:10px;
+  padding:10px;
 
   border:none;
   border-radius:15px;
@@ -209,9 +209,9 @@
 }
 
 .pal-result-card{
-  margin-top:35px;
+  margin-top:20px;
 
-  padding:35px;
+  padding:10px;
 
   border:2px solid #7822ff;
   border-radius:22px;
@@ -227,8 +227,8 @@
 }
 
 .pal-result-icon{
-  width:110px;
-  height:110px;
+  width:100px;
+  height:100px;
 
   margin:auto;
 
@@ -262,7 +262,7 @@
 .pal-note{
   margin-top:3px;
 
-  padding:18px;
+  padding:10px;
 
   border:1px solid #7822ff;
   border-radius:18px;
@@ -360,5 +360,149 @@
   .pal-note{
     flex-direction:column;
     text-align:center;
+  }
+}
+/* ===== Back Button ===== */
+
+.backBtn{
+  position:fixed;
+  top:20px;
+  left:20px;
+
+  width:50px;
+  height:50px;
+
+  border:none;
+  border-radius:50%;
+
+  cursor:pointer;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:22px;
+  color:white;
+
+  background:linear-gradient(
+    135deg,
+    #8b5cf6,
+    #3b82f6
+  );
+
+  box-shadow:
+    0 8px 25px rgba(139,92,246,.35);
+
+  z-index:1000;
+
+  transition:.3s;
+}
+
+.backBtn:hover{
+  transform:translateY(-3px);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:768px){
+
+  .pal-app{
+    padding:70px 10px 20px;
+    align-items:flex-start;
+  }
+
+  .pal-container{
+    width:100%;
+    max-width:100%;
+    padding:20px;
+    border-radius:20px;
+  }
+
+  .pal-logo-circle{
+    width:75px;
+    height:75px;
+    font-size:30px;
+  }
+
+  .pal-title{
+    font-size:1.8rem;
+  }
+
+  .pal-subtitle{
+    font-size:.85rem;
+    line-height:1.5;
+  }
+
+  .pal-input-box{
+    padding:14px;
+    font-size:14px;
+  }
+
+  .pal-check-btn{
+    padding:14px;
+    font-size:15px;
+  }
+
+  .pal-result-card{
+    padding:18px;
+    margin-top:20px;
+  }
+
+  .pal-result-icon{
+    width:70px;
+    height:70px;
+    font-size:35px;
+  }
+
+  .pal-result-card h3{
+    font-size:1.2rem;
+  }
+
+  .pal-note{
+    flex-direction:column;
+    text-align:center;
+    gap:10px;
+    padding:14px;
+  }
+
+  .pal-info{
+    min-width:45px;
+    width:45px;
+    height:45px;
+    font-size:18px;
+  }
+
+  .backBtn{
+    width:42px;
+    height:42px;
+    top:12px;
+    left:12px;
+    font-size:18px;
+  }
+}
+
+/* ===== Laptop Compact ===== */
+
+@media (min-width:769px){
+
+  .pal-container{
+    max-width:700px;
+    padding:30px;
+  }
+
+  .pal-logo-circle{
+    width:95px;
+    height:95px;
+    font-size:42px;
+  }
+
+  .pal-title{
+    font-size:2.5rem;
+  }
+
+  .pal-result-icon{
+    width:90px;
+    height:90px;
+    font-size:45px;
   }
 }

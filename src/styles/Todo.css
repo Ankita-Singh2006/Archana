@@ -1,0 +1,175 @@
+.todo-page{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:20px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #050816,
+    #0f172a,
+    #1e1b4b,
+    #581c87
+  );
+}
+
+.todo-card{
+  width:100%;
+  max-width:600px;
+
+  padding:25px;
+
+  border-radius:25px;
+
+  background:rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,.1);
+
+  color:white;
+}
+
+.todo-card h1{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.todo-input{
+  display:flex;
+  gap:10px;
+}
+
+.todo-input input{
+  flex:1;
+
+  padding:14px;
+
+  border:none;
+  outline:none;
+
+  border-radius:12px;
+}
+
+.todo-input button{
+  padding:14px 20px;
+
+  border:none;
+  cursor:pointer;
+
+  border-radius:12px;
+
+  color:white;
+
+  background:
+  linear-gradient(
+    135deg,
+    #8b5cf6,
+    #3b82f6
+  );
+}
+
+.todo-list{
+  margin-top:20px;
+}
+
+.todo-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:10px;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  background:
+  rgba(255,255,255,.05);
+}
+
+.todo-item span{
+  cursor:pointer;
+}
+
+.completed{
+  text-decoration:line-through;
+  opacity:.6;
+}
+
+.delete-btn{
+  border:none;
+  cursor:pointer;
+
+  color:white;
+
+  background:#ef4444;
+
+  width:35px;
+  height:35px;
+
+  border-radius:50%;
+}
+
+.empty-text{
+  text-align:center;
+  opacity:.7;
+}
+
+/* Back Button */
+
+.backBtn{
+  position:fixed;
+  top:20px;
+  left:20px;
+
+  width:50px;
+  height:50px;
+
+  border:none;
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  color:white;
+  font-size:22px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #8b5cf6,
+    #3b82f6
+  );
+
+  box-shadow:
+  0 8px 25px rgba(139,92,246,.35);
+
+  z-index:1000;
+}
+
+@media(max-width:768px){
+
+  .todo-card{
+    padding:18px;
+  }
+
+  .todo-input{
+    flex-direction:column;
+  }
+
+  .backBtn{
+    width:42px;
+    height:42px;
+    top:12px;
+    left:12px;
+    font-size:18px;
+  }
+}

@@ -7,20 +7,20 @@ import calculator from "../assets/calculator.jpg"
 import weather from "../assets/weather.jpg"
 import maps from "../assets/maps.jpg"
 import palindrome from "../assets/palindrome.jpg"
-import portfolio from "../assets/portfolio.jpg"
-import dashboard from "../assets/dashboard.jpg"
+import Toggle from "../assets/toggle.jpg"
+import Register from "../assets/Register.jpg"
 import todo from "../assets/todo.jpg"
-import music from "../assets/music.jpg"
+import Stopwatch from "../assets/stopwatch.jpg"
 
 import {
   Calculator,
   CloudSun,
   MapPin,
   ListChecks,
-  User,
-  LayoutDashboard,
+   User,
+  ToggleLeft,
   CheckCircle,
-  Music
+  Clock
 } from "lucide-react"
 
 const projects = [
@@ -62,21 +62,22 @@ const projects = [
   },
 
   {
-    image: portfolio,
-    icon: <User />,
-    title: "Portfolio Website",
-    desc: "Personal portfolio website with animations.",
-    color: "#ff7ad9"
-  },
+  image: Toggle,
+  icon: <ToggleLeft />,
+  title: "Theme Toggle",
+  desc: "Switch between light and dark mode instantly.",
+  color: "#00e5ff",
+  demo: "toggle"
+},
 
-  {
-    image: dashboard,
-    icon: <LayoutDashboard />,
-    title: "Dashboard",
-    desc: "Admin dashboard with charts and analytics.",
-    color: "#8c7dff"
-  },
-
+{
+  image: Register,
+  icon: <User />,
+  title: "Register",
+  desc: "Modern authentication UI with login and registration forms.",
+  color: "#00c6ff",
+  demo: "register"
+},
   {
     image: todo,
     icon: <CheckCircle />,
@@ -87,12 +88,12 @@ const projects = [
   },
 
   {
-    image: music,
-    icon: <Music />,
-    title: "Music Player",
+    image: Stopwatch,
+    icon: <Clock />,
+    title: "Stopwatch",
     desc: "Beautiful music player with animations.",
     color: "#ff7ad9",
-     demo : "music"
+     demo : "stopwatch"
   }
 
 ]
@@ -235,9 +236,9 @@ function Projects({setActiveProject,setScrollPosition,}) {
         }}
       >
 
-        <button className="more-btn">
+        {/* <button className="more-btn">
           View More Projects →
-        </button>
+        </button> */}
 
       </motion.div>
 

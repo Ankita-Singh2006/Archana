@@ -22,7 +22,7 @@ import HourlyCard from "./HourlyCard";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
-function Weather() {
+function Weather({goBack}) {
   const [city, setCity] = useState("Varanasi");
   const [search, setSearch] = useState("Varanasi");
 
@@ -74,6 +74,12 @@ function Weather() {
 
   return (
     <div className="weather-page">
+      <button
+  className="backBtn"
+  onClick={goBack}
+>
+  ←
+</button>
 
       {/* Background Glow */}
 

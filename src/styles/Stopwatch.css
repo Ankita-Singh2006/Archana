@@ -1,0 +1,127 @@
+.stopwatch-page{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:20px;
+
+  background:linear-gradient(
+    135deg,
+    #050816,
+    #0f172a,
+    #1e1b4b,
+    #581c87
+  );
+}
+
+.stopwatch-card{
+  width:100%;
+  max-width:500px;
+
+  padding:30px;
+
+  text-align:center;
+
+  border-radius:25px;
+
+  background:rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  color:white;
+}
+
+.stopwatch-card h1{
+  margin-bottom:25px;
+}
+
+.time-display{
+  font-size:4rem;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+.btn-group{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn-group button{
+  border:none;
+  padding:12px 20px;
+  border-radius:12px;
+  color:white;
+  cursor:pointer;
+}
+
+.start-btn{
+  background:#10b981;
+}
+
+.stop-btn{
+  background:#ef4444;
+}
+
+.reset-btn{
+  background:#3b82f6;
+}
+
+/* Back Button */
+
+.backBtn{
+  position:fixed;
+  top:20px;
+  left:20px;
+
+  width:50px;
+  height:50px;
+
+  border:none;
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  cursor:pointer;
+
+  color:white;
+  font-size:22px;
+
+  background:linear-gradient(
+    135deg,
+    #8b5cf6,
+    #3b82f6
+  );
+
+  box-shadow:
+    0 8px 25px rgba(139,92,246,.35);
+
+  z-index:1000;
+}
+
+@media(max-width:768px){
+
+  .time-display{
+    font-size:2.5rem;
+  }
+
+  .stopwatch-card{
+    padding:20px;
+  }
+
+  .backBtn{
+    width:42px;
+    height:42px;
+    top:12px;
+    left:12px;
+    font-size:18px;
+  }
+
+}

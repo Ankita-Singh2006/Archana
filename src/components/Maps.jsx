@@ -27,7 +27,7 @@ const MoveMap = ({ position }) => {
   return null;
 };
 
-export default function Maps() {
+export default function Maps({goBack}) {
   const [position, setPosition] = useState([25.3176, 82.9739]);
   const [query, setQuery] = useState("");
   const [route, setRoute] = useState([]);
@@ -74,9 +74,15 @@ export default function Maps() {
     });
   };return (
     <div className={dark ? "darkApp" : "lightApp"}>
-
+        <button
+  className="backBtn"
+  onClick={goBack}
+>
+  ← 
+</button>
       {/* 🌟 PREMIUM SEARCH BAR */}
       <div className="searchWrapper">
+       
 
         <div className="searchBox">
 
@@ -86,9 +92,14 @@ export default function Maps() {
             placeholder="Search any place, city, landmark..."
           />
 
-          <button onClick={searchPlace}>
-            🔍 Search
-          </button>
+         <button
+  onClick={() => {
+    console.log("Search clicked");
+    searchPlace();
+  }}
+>
+  🔍 Search
+</button>
 
         </div>
 
@@ -165,50 +176,88 @@ export default function Maps() {
           border:none;
           outline:none;
           background:transparent;
-          color:white;
+          color:black;
           padding:14px 16px;
           width:350px;
 
           font-size:18px; /* 👈 better readable */
         }
-         .top-bar {
-  position: fixed;
-  top: 3;
-  left: 0;
-  width: 100%;
-  height: 55px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  padding-left: 45px;
-  z-index: 9999;
-}
+//          .backBtn{
+//   width:48px;
+//   height:48px;
 
-.back-button {
-  background: transparent;
-  color: Black;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-}
+//   border:none;
+//   border-radius:50%;
 
+//   background:rgba(20,20,20,0.8);
+
+//   color:white;
+
+//   font-size:24px;
+//   cursor:pointer;
+
+//   backdrop-filter:blur(10px);
+
+//   box-shadow:0 0 20px rgba(168,85,247,0.3);
+
+//   transition:.3s;
+// }
+
+// .backBtn:hover{
+//   transform:scale(1.08);
+//   background:#a855f7;
+// }
 /* 🔥 IMPORTANT: Leaflet spacing fix */
 .leaflet-container {
   margin-top: 0px;
   height: calc(100vh - 50px);
   width: 100%;
 }
-        .searchBox button{
-          background:linear-gradient(135deg, cyan, #00bcd4);
-          border:none;
-          padding:10px 50px;
-          border-radius:999px;
-          cursor:pointer;
-          font-weight:bold;
-          color:black;
-          transition:0.2s;
-        }
+  .backBtn{
+  position:fixed;
+  top:20px;
+  left:20px;
 
+  width:50px;
+  height:50px;
+
+  border:none;
+  border-radius:50%;
+
+  background:linear-gradient(
+    135deg,
+    #9333ea,
+    #d946ef
+  );
+
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+
+  z-index:10001;
+}
+  .leaflet-control-zoom{
+  margin-top: 70px !important;
+}
+        .searchBox button{
+  background:linear-gradient(
+    135deg,
+    #9333ea,
+    #d946ef
+  );
+
+  color:white;
+
+  border:none;
+
+  padding:12px 28px;
+
+  border-radius:999px;
+
+  cursor:pointer;
+
+  font-weight:700;
+}
         .searchBox button:hover{
           transform:scale(1.05);
         }
@@ -228,10 +277,19 @@ export default function Maps() {
           color:black;
         }
 
-        .mapBox{
-          height:100vh;
-          width:100%;
-        }
+       .mapBox{
+  height:100vh;
+  width:100%;
+
+  overflow:hidden;
+
+  border-radius:24px;
+
+  box-shadow:
+    0 0 30px rgba(168,85,247,0.25);
+
+  border:1px solid rgba(255,255,255,0.08);
+}
 
         .info{
           position:fixed;
@@ -255,7 +313,69 @@ export default function Maps() {
           color:black;
           min-height:100vh;
         }
+          @media (max-width: 768px){
+
+  .searchWrapper{
+    flex: 1;
+    top:12px;
+    width:95%;
+    gap:6px;
+    margin-left: 18px
+  }
+
+  .searchBox{
+    width:;
+    flex:1;
+    padding:4px;
+  }
+
+  .searchBox input{
+    width:60%;
+    margin-left :29;
+    padding:20px;
+    font-size:13px;
+  }
+
+  .searchBox button{
+    margin-left:19px;
+    padding:15px 12px;
+    font-size:13px;
+  }
+
+  .backBtn{
+    width:42px;
+    height:42px;
+    font-size:20px;
+      margin-top:650px;
+    margin-right:1px;
+  
+  }
+
+  .iconBtn{
+    width:42px;
+    height:42px;
+    padding:0;
+    font-size:18px;
+  }
+
+  .leaflet-control-zoom{
+    margin-top:65px !important;
+  }
+}
+    .mapBox{
+    height:100vh;
+    border-radius:0;
+    }
+
+  .info{
+    width:90%;
+    text-align:center;
+    font-size:14px;
+  }
+}
       `}</style>
     </div>
   );
+  
 }
+

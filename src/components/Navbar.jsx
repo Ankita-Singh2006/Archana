@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,11 +31,13 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+ const scrollToSection = (id) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+  });
+
+  setMenuOpen(false);
+};
 
   return (
     <div className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
@@ -45,7 +48,7 @@ function Navbar() {
         </div>
 
         {/* NAV LINKS */}
-        <ul className="nav-links">
+       <ul className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
           <li>
             <a
               className={active === "home" ? "active" : ""}
@@ -102,9 +105,11 @@ function Navbar() {
         </button>
          
          
-        {/* MOBILE */}
-        <div className="menu-btn">
-          ☰
+        <div
+          className="menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✕" : "☰"}
         </div>
         
       </nav>

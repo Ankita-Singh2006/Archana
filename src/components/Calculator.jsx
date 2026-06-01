@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const Calculator = () => {
+
+
+const Calculator = ({goBack}) => {
   const [input, setInput] = useState("");
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   const handleClick = (value) => {
     setInput(input + value);
@@ -20,7 +25,14 @@ const Calculator = () => {
   };
 
   return (
+    
     <section id="Calculator" className="live-btn">
+<button
+  className="backBtn"
+  onClick={goBack}
+>
+  ←
+</button>
     <div
       style={{
         minHeight: "100vh",
@@ -33,7 +45,7 @@ const Calculator = () => {
     >
       <div
         style={{
-          width: "320px",
+          width: "280px",
           padding: "20px",
           borderRadius: "20px",
           background: "#1e293b",

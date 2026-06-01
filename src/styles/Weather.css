@@ -3,7 +3,19 @@
 min-height:100vh;
 padding:24px;
 position:relative;
-overflow:hidden;
+overflow-x:hidden;
+overflow-y:auto;
+
+background:
+linear-gradient(
+135deg,
+#050816,
+#0f172a,
+#1e1b4b,
+#581c87
+);
+
+color:white;
 }
 
 /* Glow */
@@ -125,21 +137,23 @@ font-size:15px;
 }
 
 .search-box button{
-padding:10px 18px;
-border:none;
-cursor:pointer;
-
-border-radius:12px;
+padding:12px 22px;
 
 background:
 linear-gradient(
 135deg,
-#8b5cf6,
-#3b82f6
+#9333ea,
+#2563eb
 );
 
-color:white;
-font-weight:600;
+box-shadow:
+0 0 20px rgba(139,92,246,.4);
+
+transition:.3s;
+}
+
+.search-box button:hover{
+transform:translateY(-2px);
 }
 
 .location-box{
@@ -182,16 +196,23 @@ gap:20px;
 /* Hero */
 
 .hero-card{
-padding:30px;
-overflow:hidden;
-position:relative;
+padding:20px;
+
+background:
+linear-gradient(
+135deg,
+rgba(139,92,246,.12),
+rgba(59,130,246,.08)
+);
+
+border:1px solid rgba(255,255,255,.12);
 }
 
 .hero-card::before{
 content:"";
 position:absolute;
 
-width:320px;
+width:300px;
 height:320px;
 
 right:-100px;
@@ -214,8 +235,8 @@ align-items:center;
 }
 
 .hero-header img{
-width:150px;
-height:150px;
+width:100px;
+height:75px;
 }
 
 .live-tag{
@@ -225,7 +246,7 @@ margin-bottom:10px;
 }
 
 .hero-header h1{
-font-size:38px;
+font-size:30px;
 font-weight:700;
 }
 
@@ -234,12 +255,12 @@ opacity:.8;
 }
 
 .temperature{
-font-size:110px;
+font-size:95px;
 font-weight:900;
 
 line-height:1;
 
-margin-top:20px;
+margin-top:5px;
 
 background:
 linear-gradient(
@@ -259,7 +280,7 @@ linear-gradient(
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:15px;
-margin-top:25px;
+margin-top:10px;
 }
 
 .stat-card{
@@ -267,14 +288,14 @@ background:rgba(255,255,255,.04);
 
 border:1px solid rgba(255,255,255,.08);
 
-padding:18px;
+padding:10px;
 
 border-radius:20px;
 
 display:flex;
 flex-direction:column;
 align-items:center;
-gap:8px;
+gap:5px;
 
 transition:.35s;
 }
@@ -292,14 +313,14 @@ opacity:.8;
 /* Hourly */
 
 .hourly-card{
-margin-top:20px;
-padding:20px;
+margin-top:10px;
+padding:15px;
 }
 
 .section-title{
 font-size:18px;
 font-weight:700;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .hourly-scroll{
@@ -310,7 +331,7 @@ padding-bottom:5px;
 }
 
 .hourly-scroll::-webkit-scrollbar{
-height:5px;
+height:3px;
 }
 
 .hourly-scroll::-webkit-scrollbar-thumb{
@@ -321,7 +342,7 @@ border-radius:50px;
 .hour-card{
 min-width:90px;
 
-padding:15px;
+padding:10px;
 
 background:rgba(255,255,255,.04);
 
@@ -341,11 +362,11 @@ width:50px;
 .right-column{
 display:flex;
 flex-direction:column;
-gap:20px;
+gap:17px;
 }
 
 .forecast-wrapper{
-padding:20px;
+padding:10px;
 }
 
 .forecast-grid{
@@ -353,13 +374,18 @@ display:grid;
 grid-template-columns:repeat(5,1fr);
 gap:10px;
 }
+.forecast-card:hover{
+transform:translateY(-8px);
 
+box-shadow:
+0 0 25px rgba(139,92,246,.3);
+}
 .forecast-card{
 background:rgba(255,255,255,.04);
 
 border:1px solid rgba(255,255,255,.08);
 
-padding:15px;
+padding:8px;
 
 border-radius:18px;
 
@@ -367,13 +393,13 @@ text-align:center;
 }
 
 .forecast-card img{
-width:55px;
+width:50px;
 }
 
 /* AQI */
 
 .aqi-card{
-padding:20px;
+padding:7px;
 
 background:rgba(255,255,255,.08);
 
@@ -385,10 +411,10 @@ border-radius:28px;
 }
 
 .aqi-circle{
-width:140px;
+width:100px;
 margin:auto;
-margin-top:20px;
-margin-bottom:15px;
+margin-top:8px;
+margin-bottom:5px;
 }
 
 .aqi-card h3{
@@ -403,62 +429,206 @@ opacity:.8;
 /* Sunrise */
 
 .sun-card{
-padding:20px;
+padding:10px;
 }
 
 .sun-item{
 display:flex;
 align-items:center;
-gap:15px;
+gap:10px;
 
-padding:15px;
+padding:10px;
 margin-top:12px;
 
 background:rgba(255,255,255,.04);
 
 border-radius:18px;
 }
+/* ================= MOBILE RESPONSIVE ================= */
 
-/* Mobile */
+@media (max-width:768px){
 
-@media(max-width:1000px){
+  .weather-page{
+    padding:8px;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
 
-.dashboard{
-grid-template-columns:1fr;
-}
+  .topbar{
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    padding:8px;
+  }
 
-}
+  .logo{
+    text-align:center;
+    font-size:15px;
+  }
 
-@media(max-width:768px){
+  .search-box{
+    width:100%;
+    padding:10px;
+  }
 
-.weather-page{
-padding:12px;
-}
+  .search-box input{
+    min-width:0;
+    font-size:14px;
+  }
 
-.topbar{
-flex-wrap:wrap;
-}
+  .search-box button{
+    padding:8px 14px;
+  }
 
-.search-box{
-width:100%;
-}
+  .location-box{
+    justify-content:center;
+    font-size:14px;
+  }
 
-.hero-header{
-flex-direction:column;
-text-align:center;
-}
+  .refresh-btn{
+    width:100%;
+    height:45px;
+    border-radius:14px;
+  }
 
-.temperature{
-font-size:80px;
-text-align:center;
-}
+  .dashboard{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
 
-.weather-stats{
-grid-template-columns:repeat(2,1fr);
-}
+  .left-column,
+  .right-column{
+    width:100%;
+  }
 
-.forecast-grid{
-grid-template-columns:repeat(2,1fr);
-}
+  .hero-card{
+    position:relative;
+    overflow:hidden;
+    padding:8px;
+  }
 
+  .hero-header{
+    flex-direction:column;
+    text-align:center;
+    gap:8px;
+  }
+
+  .hero-header h1{
+    font-size:22px;
+    margin:0;
+  }
+
+  .hero-header span{
+    font-size:10px;
+  }
+
+  /* .hero-header img{
+    width:70px;
+    height:90px;
+  } */
+
+  .live-tag{
+    font-size:12px;
+    margin-bottom:4px;
+  }
+
+  .temperature{
+    font-size:56px;
+    text-align:center;
+    margin-top:0;
+  }
+
+  .weather-stats{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    margin-top:10px;
+  }
+
+  .stat-card{
+    padding:8px;
+    border-radius:14px;
+  }
+
+  .stat-card svg{
+    width:18px;
+    height:18px;
+  }
+
+  .stat-card span{
+    font-size:11px;
+  }
+
+  .stat-card h4{
+    font-size:14px;
+    margin:0;
+  }
+
+  .hourly-card{
+    padding:12px;
+  }
+
+  .hourly-scroll{
+    overflow-x:auto;
+    gap:10px;
+    scrollbar-width:none;
+  }
+
+  .hourly-scroll::-webkit-scrollbar{
+    display:none;
+  }
+
+  .hour-card{
+    min-width:85px;
+    flex-shrink:0;
+  }
+
+  .forecast-wrapper{
+    padding:12px;
+  }
+
+  .forecast-grid{
+    display:flex !important;
+    flex-direction:row !important;
+    overflow-x:auto;
+    gap:10px;
+    scrollbar-width:none;
+  }
+
+  .forecast-grid::-webkit-scrollbar{
+    display:none;
+  }
+
+  .forecast-card{
+    min-width:90px;
+    flex-shrink:0;
+    padding:8px;
+  }
+
+  .aqi-card{
+    padding:12px;
+  }
+
+  .aqi-circle{
+    width:70px;
+  }
+
+  .sun-card{
+    padding:12px;
+  }
+
+  .sun-item{
+    padding:8px;
+    margin-top:8px;
+  }
+
+  .section-title{
+    font-size:16px;
+    margin-bottom:8px;
+  }
+
+  .backBtn{
+    width:42px;
+    height:42px;
+  }
 }

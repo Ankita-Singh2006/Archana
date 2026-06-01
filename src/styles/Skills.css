@@ -223,55 +223,92 @@
 /* MOBILE VIEW */
 
 @media (max-width: 768px) {
-  .skills-section {
-    padding: 90px 5%;
+
+  .skills-section{
+    min-height:auto;
+    padding:70px 20px;
   }
 
-  .skills-top {
-    margin-bottom: 55px;
+  .skills-top{
+    margin-bottom:35px;
   }
 
-  .skills-top h2 {
-    font-size: 48px;
-    line-height: 1.1;
+  .skills-tag{
+    font-size:12px;
+    letter-spacing:3px;
   }
 
-  .skills-top p {
-    font-size: 14px;
-    line-height: 1.6;
+  .skills-top h2{
+    font-size:38px;
+    line-height:1.1;
+    margin-top:8px;
   }
 
-  .skills-grid {
-    gap: 22px;
+  .skills-top p{
+    font-size:13px;
+    line-height:20px;
+    max-width:280px;
+    margin:12px auto 0;
   }
 
-  .skill-card {
-    padding: 28px 22px;
+  .skills-grid{
+    gap:14px;
   }
 
-  .skill-card h3 {
-    font-size: 26px;
+  .skill-card{
+    padding:20px 16px;
+    border-radius:20px;
   }
 
-  .skill-icon {
-    width: 68px;
-    height: 68px;
-    font-size: 30px;
+  .skill-icon{
+    width:55px;
+    height:55px;
+    border-radius:16px;
+    font-size:24px;
+    margin-bottom:16px;
+  }
+
+  .skill-card h3{
+    font-size:22px;
+    margin-bottom:14px;
+  }
+
+  .skill-progress{
+    height:8px;
+  }
+
+  .skill-bottom{
+    margin-top:10px;
+  }
+
+  .skill-bottom span{
+    font-size:12px;
   }
 }
 
 /* SMALL MOBILE */
 
-@media (max-width: 480px) {
-  .skills-top h2 {
-    font-size: 38px;
+@media (max-width:480px){
+
+  .skills-top h2{
+    font-size:34px;
   }
 
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .skills-grid{
+    gap:12px;
   }
 
-  .skill-card {
-    border-radius: 24px;
+  .skill-card{
+    padding:18px 14px;
+  }
+
+  .skill-icon{
+    width:50px;
+    height:50px;
+    font-size:22px;
+  }
+
+  .skill-card h3{
+    font-size:20px;
   }
 }

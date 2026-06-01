@@ -297,102 +297,156 @@ button:hover {
   transform: translateY(0);
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 992px) {
-  .contact {
-    padding: 80px 5%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .header h1 {
-    font-size: 46px;
-  }
-}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
-  .contact {
+
+  .contact{
     padding: 70px 4%;
+    min-height: auto;
   }
 
-  .header {
-    margin-bottom: 35px;
+  .header{
+    margin-bottom: 20px;
   }
 
-  .header h1 {
+  .subtitle{
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .header h1{
     font-size: 38px;
+    margin-bottom: 8px;
   }
 
-  .desc {
-    font-size: 14px;
+  .desc{
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .left{
+    gap: 16px;
   }
 
   .card,
-  .form-card,
-  .bottom {
-    padding: 24px;
-    border-radius: 22px;
+  .form-card{
+    padding: 18px;
+    border-radius: 18px;
   }
 
   .card h2,
-  .form-card h2 {
-    font-size: 24px;
+  .form-card h2{
+    font-size: 22px;
+    margin-bottom: 10px;
   }
 
-  .socials a,
-  .icon {
-    width: 52px;
-    height: 52px;
-  }
-
-  textarea {
-    min-height: 130px;
-  }
-
-  .bottom h2 {
-    font-size: 21px;
+  .text{
+    font-size: 14px;
     line-height: 1.6;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact {
-    padding: 60px 4%;
+    margin-bottom: 12px;
   }
 
-  .header h1 {
-    font-size: 32px;
+  .info{
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 10px;
   }
 
-  .subtitle {
-    font-size: 12px;
-    letter-spacing: 3px;
+  .icon{
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 12px;
   }
 
-  .grid {
-    gap: 20px;
+  .info h3{
+    font-size: 15px;
+    margin-bottom: 2px;
   }
 
-  .left {
-    gap: 20px;
+  .info p{
+    font-size: 13px;
   }
 
-  .card,
-  .form-card,
-  .bottom {
-    padding: 20px;
+  .socials{
+    gap: 12px;
+  }
+
+  .socials a{
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  form{
+    gap: 14px;
   }
 
   input,
-  textarea,
-  button {
+  textarea{
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  textarea{
+    min-height: 120px;
+  }
+
+  button{
+    padding: 14px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+}
+
+/* EXTRA SMALL */
+
+@media (max-width: 480px){
+
+  .contact{
+    padding: 60px 4%;
+  }
+
+  .header h1{
+    font-size: 32px;
+  }
+
+  .card,
+  .form-card{
+    padding: 16px;
+  }
+
+  .card h2,
+  .form-card h2{
+    font-size: 20px;
+  }
+
+  .icon{
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .socials a{
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .info h3{
     font-size: 14px;
   }
 
-  .bottom h2 {
-    font-size: 18px;
+  .info p{
+    font-size: 12px;
   }
 }
